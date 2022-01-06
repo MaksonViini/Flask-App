@@ -6,6 +6,9 @@ services:
 stages:
   - deploy
 
+before_script:
+  - apk update && apk add bash
+
 step-deploy-prod:
   stage: deploy
   only:
