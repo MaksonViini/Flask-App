@@ -14,7 +14,7 @@ step-deploy-prod:
   only:
     - production
   script:
-    - ./deploy.sh
+    - sudo bash ./deploy.sh
     # - sudo docker image prune -f
   environment: production
   when: manual
