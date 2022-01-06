@@ -9,7 +9,7 @@ stages:
 step-deploy-prod:
   stage: deploy
   only:
-    - develop
+    - production
   script:
     - sudo apt-get install -y python3-pip
     - sudo pip3 install --upgrade setuptools
