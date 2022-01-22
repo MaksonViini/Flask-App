@@ -8,7 +8,7 @@ stages:
 
 before_script:
   - docker info
-  - apk update && apk add bash
+  # - apk update && apk add bash
 
 step-deploy-prod:
   stage: deploy
@@ -17,7 +17,7 @@ step-deploy-prod:
   script:
     - sudo apt-get install -y python3-pip
     - sudo pip3 install --upgrade setuptools
-    - sudo pip3 install docker-compose
-    - sudo docker-compose up -d
+    # - sudo pip3 install docker-compose
+    # - sudo docker-compose up -d
   environment: production
   # when: manual
