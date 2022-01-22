@@ -1,23 +1,33 @@
-image: docker:19.03.12
+# image: docker:19.03.12
 
-services:
-  - docker:19.03.12-dind
+# services:
+#   - docker:19.03.12-dind
 
 stages:
+  - build
   - deploy
 
-before_script:
-  - docker info
-  # - apk update && apk add bash
+# before_script:
+#   - docker info
+#   # - apk update && apk add bash
+
+buildjob:
+  stage: build
+
+  script:
+    - echo "entrou aqui"
+    - docker-compose up -d
 
 step-deploy-prod:
   stage: deploy
   only:
     - production
   script:
+    - echo "entrou aqui"
+    - echo $deploy
     # - sudo apt-get install -y python3-pip
     # - sudo pip3 install --upgrade setuptools
     # - sudo pip3 install docker-compose
-    - docker-compose up -d
+    # - docker-compose up -d
   environment: production
   # when: manual
