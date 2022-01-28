@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  delivery_api:
+    container_name: delivery_api
+    build:
+      context: .
+    ports:
+      - 80:5000
+    restart: always
+    # depends_on:
+    #   - timescale
+    # timescale:
+    #   container_name: timescaledb
+    #   image: timescale/timescaledb:latest-pg12
+    #   environment:
+    #     - POSTGRES_USER=postgres
+    #     - POSTGRES_PASSWORD=postgres
+    #     - POSTGRES_DB=timescaledb
+    #   volumes:
+    #     - timescale_data:/var/lib/postgresql/data
+    #   restart: always
