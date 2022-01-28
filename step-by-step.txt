@@ -1,0 +1,7 @@
+1 - install gcloud sdk
+2 - gcloud init
+3 - gcloud auth configure-docker
+4 - docker tag flask-delivery-app_delivery_api gcr.io/dulcet-legend-332817/flask-delivery-app_delivery_api
+  - docker tag [TAG] gcr.io/[PROJECT ID]/[TAG]
+5 - docker push gcr.io/dulcet-legend-332817/flask-delivery-app_delivery_api
+  - docker push gcr.io/[PROJECT ID]/[TAG]
