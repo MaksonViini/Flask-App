@@ -6,5 +6,6 @@ delivery_ns = server.delivery_name_space
 
 
 class Delivery(Resource):
+    
     def get(self, ):
         return {'hello': 'world'}
